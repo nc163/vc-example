@@ -1,0 +1,214 @@
+{
+    "editor.bracketPairColorization.enabled": true,
+    "editor.minimap.enabled": true,
+
+    // font
+    "editor.tabSize": 2,
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Ricty Diminished, Source Han Code JP, Menlo, Monaco, 'Courier New', monospace",
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+
+    // "editor.wordWrap": "off",
+    "editor.cursorBlinking": "solid",
+
+    //= Drag and Dropでファイルを移動した時に確認ダイアログを表示する
+    "explorer.confirmDragAndDrop": true,
+    //= 自動保存OFF
+    "files.autoSave": "off",
+    //= パンくずリスト
+    "breadcrumbs.enabled": true,
+    //= ファイルの末尾の空白をトリミング
+    "files.trimTrailingWhitespace": true,
+    //= 最終行以降の新しい行をトリミング
+    "files.trimFinalNewlines": true,
+    //= ファイルの末尾に改行を追加
+    "files.insertFinalNewline": true,
+    //= エクスプローラーで非表示リスト
+    "files.exclude": {
+      // OS
+      "**/.DS_Store": true,
+      // editor
+      ".vscode": true,
+      // git
+      "**/.git": true,
+      "**/.gitignore": true,
+      // gitlab
+      "**/.gitlab": true,
+      "**/.gitlab-ci.yml": true,
+      // javascript
+      "**/node_modules": true,
+      // ruby
+      "**/.bundle": true,
+      "**/.rubocop*": true,
+      // ruby on rails
+
+      // workspace
+      "**/db": true,
+      "**/log": true,
+      "**/tmp": true,
+    },
+
+    //= ファイル監視除外ファイル
+    "files.watcherExclude": {
+      "**/.DS_Store": true,
+      "**/.vscode": true,
+      "**/.git": true,
+      "**/.gitignore": true,
+      // javascript
+      "**/node_modules": true,
+      "package.json": true,
+      "package-lock.json": true,
+      // ruby on rails
+      "**/.bundle": true,
+      "**/.yardoc": true,
+      "**/.solargraph.yml": true,
+      "**/.rubocop.yml": true,
+      "**/.rubocop_todo.yml": true,
+      "**/*.diff": true,
+      "**/*.rdoc": true,
+      "**/*.log": true,
+      "**/Gemfile": true,
+      "**/Gemfile.lock": true,
+
+      // workspace
+      "**/db": true,
+      "**/log": true,
+      "**/tmp": true,
+    },
+
+    //= 検索除外ファイル
+    "search.exclude": {
+      // OS
+      "**/.DS_Store": true,
+      // editor
+      ".vscode": true,
+      // git
+      "**/.git": true,
+      "**/.gitignore": true,
+      // gitlab
+      "**/.gitlab": true,
+      "**/.gitlab-ci.yml": true,
+      // javascript
+      "**/node_modules": true,
+      "package.json": true,
+      "package-lock.json": true,
+      // ruby
+      "**/.bundle": true,
+      "**/.rubocop*": true,
+      "**/Gemfile": true,
+      "**/Gemfile.lock": true,
+      // ruby on rails
+      "**/.yardoc": true,
+      "**/.solargraph.yml": true,
+      // workspace
+      "**/db": true,
+      "**/log": true,
+      "**/tmp": true,
+    },
+
+    //= 言語の関連付け
+    "files.associations": {
+      ".*rake": "ruby"
+    },
+
+    //= 推奨する拡張機能を通知する
+    "extensions.ignoreRecommendations": false,
+
+
+
+    /* ==========================================
+     * extensions
+     * ========================================== */
+
+    //= Blockman
+    // settings.json (User/Global config, not Workspace config)
+    // To open this file in VS Code, press F1, type 'settings json' and choose 'Preferences: Open Settings (JSON)'
+    "editor.inlayHints.enabled": "off",
+    "editor.guides.indentation": false, // new API for indent guides. The old one is: "editor.renderIndentGuides": false,
+    "editor.guides.bracketPairs": false, // advanced indent guides (But only for brackets) (This does not turn off editor.bracketPairColorization)
+    "editor.wordWrap": "off",
+    "diffEditor.wordWrap": "off",
+
+    "workbench.colorCustomizations": {
+        // ...
+        "editor.lineHighlightBorder": "#9fced11f",
+        "editor.lineHighlightBackground": "#1073cf2d"
+    },
+
+    "todo-tree.general.tags": [
+      "BUG",
+      "HACK",
+      "FIXME",
+      "TODO",
+      "XXX",
+      "CHECK"
+    ],
+
+
+    //= copilot
+    //
+    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.enable": {
+      "*": true,
+      "plaintext": false,
+      "yaml": false,
+      "json": false
+    },
+
+
+    //= vscode-ruby
+    // https://github.com/rubyide/vscode-ruby/blob/main/packages/vscode-ruby-client/README.md
+    //
+    // formatting:  https://github.com/rubyide/vscode-ruby/blob/main/docs/formatting.md
+    // linting:     https://github.com/rubyide/vscode-ruby/blob/main/docs/linting.md
+    //
+    "ruby.codeCompletion": false,      // Method to use for code completion. Use `false` to disable or if another extension provides this feature.
+    "ruby.format": "rubocop",          // Which system to use for formatting. Use `false` to disable or if another extension provides this feature.
+    "ruby.intellisense": "rubyLocate", // Method to use for intellisense (go to definition, etc.). Use `false` to disable or if another extension provides this feature.
+    "ruby.locate": {
+      "include": "**/*.rb", // Set individual ruby linters to use
+      "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}"
+    },
+    "ruby.lint": { // spec: https://github.com/rubyide/vscode-ruby/blob/main/docs/linting.md
+      "rubocop": {
+        "useBundler": true,
+        "command": "rubocop",
+        "rails": true,
+        "lint": true,
+        "only": ["**/*.rb", "**/*.rake"],
+      },
+    },
+    "ruby.pathToBundler": "bundle",
+    "ruby.useLanguageServer": true,
+
+    //= ruby-rubocop
+    "ruby.rubocop.onSave": true,
+    "ruby.rubocop.configFilePath": ".rubocop.yml",
+    "ruby.rubocop.executePath": "",
+    "ruby.rubocop.useBundler": true,
+    "ruby.rubocop.suppressRubocopWarnings": true,
+
+    //= vscode-solargraph
+    //
+    "solargraph.autoformat": true,      // Enable automatic formatting while typing (WARNING: experimental)
+    "solargraph.checkGemVersion": true, // Automatically check if a new version of the Solargraph gem is available.
+    "solargraph.commandPath": "solargraph",
+    "solargraph.completion": true,      // Enable completion
+    "solargraph.definitions":false,     // Enable definitions (go to, etc.)
+    "solargraph.diagnostics": true,     // Enable diagnostics (warnings, errors, etc.)
+    "solargraph.folding": true,         // Enable folding
+    "solargraph.formatting": true,      // Enable document formatting
+    "solargraph.hover": true,           // Enable hover
+    "solargraph.references": true,      // Enable finding references
+    "solargraph.rename": false,         // Enable renaming
+    "solargraph.symbols": true,         // Enable symbols (outline)
+    "solargraph.logLevel": "warn",      // Level of debug info to log. `warn` is least and `debug` is most.
+    "solargraph.useBundler": false,
+    "cSpell.words": [
+      "yuzurune"
+    ], // enable solargraph via bundler
+
+    //= rdbg
+    //
+  }

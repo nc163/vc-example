@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "es2022"
+  },
+  "include": ["src/**/*"],
+  "ts-node": {
+    "esm": true,
+    "files": true,
+    "require": ["tsconfig-paths/register"]
+  }
+}

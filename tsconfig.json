@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "allowJs": true
+  },
+  "exclude": ["node_modules"]
+}

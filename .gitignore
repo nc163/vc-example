@@ -1,0 +1,18 @@
+*.local
+.DS_Store
+.eslintcache
+.next
+.pnpm-debug.log*
+.ipfs
+.env
+cache
+coverage
+dist
+node_modules
+tsconfig.tsbuildinfo
+
+#docs
+docs/did-*.json
+
+# key
+keys/*

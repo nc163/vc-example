@@ -1,0 +1,4 @@
+build/
+*.yml
+*.html
+*.md

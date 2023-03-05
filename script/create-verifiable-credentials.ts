@@ -45,7 +45,6 @@ const Agent = createAgent<IKeyManager & IDIDManager & ICredentialIssuer & ICrede
   plugins: [
     new KeyManager({
       store: new MemoryKeyStore(),
-      // store: new MemoryKeyStore(),
       kms: {
         mem: new KeyManagementSystem(new MemoryPrivateKeyStore()),
       },

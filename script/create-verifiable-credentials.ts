@@ -100,7 +100,7 @@ console.log(`
 ${JSON.stringify(issuer, null, 2)}
 
 == verifiableCredential
-${JSON.stringify(credential, null, 2)}
+${JSON.stringify(verifiableCredential, null, 2)}
 
 == verificationResult
 ${JSON.stringify(verificationResult, null, 2)}

@@ -70,9 +70,7 @@ const Agent = createAgent<IKeyManager & IDIDManager & ICredentialIssuer & ICrede
     }),
   ],
 })
-// const identifier = await Agent.didManagerImport(issuer)
-const identifier = await Agent.didManagerCreate()
-// const didEthrIdentifier = await Agent.didManagerCreate({ provider: 'did:ethr' })
+const identifier = await Agent.didManagerImport(issuer)
 
 /**
  * 認証情報を発行
